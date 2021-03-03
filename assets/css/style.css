@@ -10,3 +10,8 @@ body {
     background-size: cover;
 }
 
+footer {
+    border-top: 5px solid white;
+    padding: 10px;
+    
+}
