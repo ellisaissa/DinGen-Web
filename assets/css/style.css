@@ -10,8 +10,30 @@ body {
     background-size: cover;
 }
 
+.search-bar {
+    margin: 20px;
+    padding: 5px;
+}
+
+.search-bar input {
+    width: 50%;
+}
+
+.random-btn {
+    margin: 20px;
+   padding: 5px;
+   border-radius: 25px;
+   background-color: #C00BE3; 
+   color: white;
+
+}
+
+.random-btn:hover {
+    background-color: #FD0DCB;
+}
+
 footer {
     border-top: 5px solid white;
-    padding: 10px;
+    padding: 20px;
     
 }
