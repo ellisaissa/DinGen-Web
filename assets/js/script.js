@@ -10,6 +10,12 @@ $(document).ready(function () {
     });
   });
 
+// Modal set up
+// id="search-input-eatout"
+// id="random-eatout-btn"
+
+// id="search-input-eatin"
+// id="random-eatin-btn"
   var modal = document.getElementById("results-modal");
   var btn = document.getElementById("modal btn");
   var span = document.getElementsByClassName("close") [0];
@@ -24,6 +30,7 @@ $(document).ready(function () {
       modal.style.display ="none";
     }
   }
+
 //   API meal db
   function searchApi(query, format) {
     let locQueryUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
