@@ -9,19 +9,18 @@ $(document).ready(function () {
       });
     });
   });
-//  modal 
-
 
 // Modal set up
-// id="search-input-eatout"
-// id="random-eatout-btn"
+// id="search-input-taco"
+// id="random-taco-btn"
 
 // id="search-input-eatin"
 // id="random-eatin-btn"
 
-  var modal = document.getElementById("results-modal");
-  var btn = document.getElementById("modal btn");
-  var span = document.getElementsByClassName("close") [0];
+  let modal = document.getElementById("search-input-eatin search-input-taco");
+  let btn = document.getElementById("random-eatin-btn")
+  let taco= document.getElementById ("taco-btn");
+  let span = document.getElementsByClassName("close") [0];
   btn.click = function () {
     modal.style.display = "block";
   }

@@ -86,7 +86,7 @@
             href="eat-out.html"
             class=" active lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white"
           >
-            <span>Eat Out</span>
+            <span>Tacos</span>
           </a>
     
           <a
@@ -104,14 +104,28 @@
     <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
-<button class="random-btn" id="random-eatout-btn">Random</button>
 
 <!--- Open Modal-->
-<button id="modal btn"> open modal</button>
-<div id="results-modal" class="modal">
+<button id="random-taco-btn" class="random-btn" >Random</button>
+<div id="results-modal" >
   <!--modal data-->
   <div class="modal-data">
     <span class="close"></span>
+  </div>
+</div>
+
+<!-- Modal content -->
+<div class="modal-content">
+  <div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>Random</h2>
+  </div>
+  <div class="modal-body">
+    <p>What kind of taco</p>
+    <p>ingredients</p>
+  </div>
+  <div class="modal-footer">
+    <h3>Modal Footer</h3>
   </div>
 </div>
 
