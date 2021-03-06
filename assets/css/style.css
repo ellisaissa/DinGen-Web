@@ -32,10 +32,8 @@ body {
     background-color: #FD0DCB;
 }
 
-footer {
-    border-top: 5px solid white;
-    padding: 20px;
-    
+.active {
+    color: #FD0DCB;
 }
 
 .modal {
@@ -72,3 +70,9 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
+
+  footer {
+    border-top: 5px solid white;
+    padding: 20px;
+    
+}
