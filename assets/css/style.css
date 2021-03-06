@@ -10,6 +10,25 @@ body {
     background-size: cover;
 }
 
+.random-taco {
+    background-color: #FD0DCB;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.taco-ingredient {
+    margin-bottom: 5%;
+}
+
+#taco-results {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 5%;
+}
+
 footer {
     border-top: 5px solid white;
     padding: 10px;
