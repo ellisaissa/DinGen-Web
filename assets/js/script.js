@@ -10,9 +10,33 @@ $(document).ready(function () {
     });
   });
 
-  // Script for the button that generates a random restaurant response
+// Modal set up
+// id="search-input-eatout"
+// id="random-eatout-btn"
 
-  let btnDiv = $("#btn-test");
+// id="search-input-eatin"
+// id="random-eatin-btn"
+
+let btnDiv = $("#btn-test");
+
+let randomBtnTaco = $("<button>");
+randomBtnTaco.text("Forget it, I just want tacos");
+randomBtnTaco.attr('class', "random-taco");
+randomBtnTaco.attr("id", "random-btn-taco");
+btnDiv.append(randomBtnTaco);
+
+let modal = document.getElementById("random-taco-modal");
+let btn = document.getElementById("random-btn-taco");
+let span = document.getElementsByClassName("close") [0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+  // Script for the button that generates a random restaurant response
 
   let tacoBaseLayer = $("#base-layer");
   let tacoBaseLayerLink = $("#base-layer-link");
@@ -28,11 +52,6 @@ $(document).ready(function () {
 
   let tacoShell = $("#shell");
   let tacoShellLink = $("#shell-link");
-
-  let randomBtnTaco = $("<button>");
-  randomBtnTaco.text("Forget it, I just want tacos");
-  randomBtnTaco.attr('class', "random-taco");
-  btnDiv.append(randomBtnTaco);
 
   randomBtnTaco.on("click", function () {
     console.log("Click event works");
@@ -72,30 +91,6 @@ $(document).ready(function () {
         tacoShellLink.attr("target", "_blank");
       })
   })
-//  modal 
-
-
-// Modal set up
-// id="search-input-eatout"
-// id="random-eatout-btn"
-
-// id="search-input-eatin"
-// id="random-eatin-btn"
-
-  var modal = document.getElementById("results-modal");
-  var btn = document.getElementById("modal btn");
-  var span = document.getElementsByClassName("close") [0];
-  btn.click = function () {
-    modal.style.display = "block";
-  }
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display ="none";
-    }
-  }
 
 //   API meal db
   function searchApi(query, format) {
