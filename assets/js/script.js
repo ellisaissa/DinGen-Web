@@ -9,7 +9,7 @@ $(document).ready(function () {
       });
     });
   });
-
+//  modal 
   var modal = document.getElementById("results-modal");
   var btn = document.getElementById("modal btn");
   var span = document.getElementsByClassName("close") [0];
