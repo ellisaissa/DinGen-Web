@@ -9,6 +9,8 @@ $(document).ready(function () {
       });
     });
   });
+//  modal 
+
 
 // Modal set up
 // id="search-input-eatout"
@@ -16,6 +18,7 @@ $(document).ready(function () {
 
 // id="search-input-eatin"
 // id="random-eatin-btn"
+
   var modal = document.getElementById("results-modal");
   var btn = document.getElementById("modal btn");
   var span = document.getElementsByClassName("close") [0];
