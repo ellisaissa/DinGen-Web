@@ -64,16 +64,18 @@ body {
     width: 50%;
     height: 50%;
     border: 3px solid black;
-    padding: 3%;  
+    border-radius: 20px;
+    padding: 3%;
     padding-top: 8%;
     overflow: auto;
-    background-color: rgb(138, 67, 204);
-    background-color: palevioletred;
   }
   
   .close {
-    color: black;
-    background-color: blueviolet;
+    color: white;
+    background-color: black;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -81,7 +83,8 @@ body {
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: black;
+    background-color: white;
     text-decoration: none;
     cursor: pointer;
   }
