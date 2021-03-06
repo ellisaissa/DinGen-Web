@@ -106,43 +106,29 @@
 
 <div id = "btn-test"></div>
 
-<div id = "taco-results">
-  <p>Base Layer: <a id = "base-layer-link"><span id = "base-layer"></a></span></p>
-
-  <p>Condiment: <a id = "condiment-link"><span id = "condiment"></a></span></p>
-
-  <p>Mix In: <a id = "mixin-link"><span id = "mixin"></a></span></p>
-
-  <p>Seasoning: <a id = "seasoning-link"><span id = "seasoning"></a></span></p>
-
-  <p>Shell: <a id = "shell-link"><span id = "shell"></a></span></p>
-</div>
-
-<button class="random-btn" id="random-eatout-btn">Random</button>
-
 <!--- Open Modal-->
-<button id="random-taco-btn" class="random-btn" >Random</button>
-<div id="results-modal" >
+<modal class="random-btn" id="random-taco-modal" >
+
   <!--modal data-->
   <div class="modal-data">
-    <span class="close"></span>
+
+    <div id = "taco-results">
+      <p>Base Layer: <a id = "base-layer-link"><span id = "base-layer"></a></span></p>
+    
+      <p>Condiment: <a id = "condiment-link"><span id = "condiment"></a></span></p>
+    
+      <p>Mix In: <a id = "mixin-link"><span id = "mixin"></a></span></p>
+    
+      <p>Seasoning: <a id = "seasoning-link"><span id = "seasoning"></a></span></p>
+    
+      <p>Shell: <a id = "shell-link"><span id = "shell"></a></span></p>
+    </div>
+    
+    <button class = "close"><span class="close"></span>CLOSE</button>
   </div>
 </div>
 
-<!-- Modal content -->
-<div class="modal-content">
-  <div class="modal-header">
-    <span class="close">&times;</span>
-    <h2>Random</h2>
-  </div>
-  <div class="modal-body">
-    <p>What kind of taco</p>
-    <p>ingredients</p>
-  </div>
-  <div class="modal-footer">
-    <h3>Modal Footer</h3>
-  </div>
-</div>
+</modal>
 
 <!-- Footer -->
 <footer class="text-white inline-flex items-center text-center w-full object-center mt-12 text-3xl">

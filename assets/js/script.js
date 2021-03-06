@@ -17,13 +17,23 @@ $(document).ready(function () {
 // id="search-input-eatin"
 // id="random-eatin-btn"
 
-let modal = document.getElementById("search-input-eatin search-input-taco");
-let btn = document.getElementById("random-eatin-btn")
+let btnDiv = $("#btn-test");
+
+let randomBtnTaco = $("<button>");
+randomBtnTaco.text("Forget it, I just want tacos");
+randomBtnTaco.attr('class', "random-taco");
+randomBtnTaco.attr("id", "random-btn-taco");
+btnDiv.append(randomBtnTaco);
+
+let modal = document.getElementById("random-taco-modal");
+let btn = document.getElementById("random-btn-taco");
 let taco= document.getElementById ("taco-btn");
 let span = document.getElementsByClassName("close") [0];
-btn.click = function () {
+
+btn.onclick= function() {
   modal.style.display = "block";
 }
+
 span.onclick = function() {
   modal.style.display = "none";
 }
@@ -35,7 +45,6 @@ window.onclick = function(event) {
 
   // Script for the button that generates a random restaurant response
 
-  let btnDiv = $("#btn-test");
 
   let tacoBaseLayer = $("#base-layer");
   let tacoBaseLayerLink = $("#base-layer-link");
@@ -52,14 +61,11 @@ window.onclick = function(event) {
   let tacoShell = $("#shell");
   let tacoShellLink = $("#shell-link");
 
-  let randomBtnTaco = $("<button>");
-  randomBtnTaco.text("Forget it, I just want tacos");
-  randomBtnTaco.attr('class', "random-taco");
-  btnDiv.append(randomBtnTaco);
 
   randomBtnTaco.on("click", function () {
     console.log("Click event works");
     let requestRandomTaco = "http://taco-randomizer.herokuapp.com/random/";
+
 
     fetch(requestRandomTaco)
       .then(function(response) {
