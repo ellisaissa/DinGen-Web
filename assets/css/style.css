@@ -1,0 +1,117 @@
+body {
+    background-image: linear-gradient(#8D00FA, #C00BE3, #FD0DCB);
+    font-family: 'Oswald', sans-serif; 
+    border: none;
+    width: 100%;
+    height: 100%;
+    /* background-image: inherit; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.random-taco {
+    background-color: #FD0DCB;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.taco-ingredient {
+    margin-bottom: 5%;
+}
+
+#taco-results {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 5%;
+}
+
+.search-bar {
+    margin: 20px;
+    padding: 5px;
+}
+
+.search-bar input {
+    width: 50%;
+}
+
+.random-btn {
+    margin: 20px;
+   padding: 5px;
+   border-radius: 25px;
+   background-color: #C00BE3; 
+   color: white;
+
+}
+
+.random-btn:hover {
+    background-color: #FD0DCB;
+}
+
+.active {
+    color: #FD0DCB;
+}
+
+.modal {
+    display:none;
+    position:fixed;
+    z-index: 1;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 3%;
+    padding-top: 8%;
+    overflow: auto;
+  }
+  
+  .close {
+    color: white;
+    background-color: black;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .about-us-container {
+      color: white;
+      text-align: center;
+
+  }
+
+  .about-us-container h1 {
+      font-size: 30px;
+  }
+
+  .about-us-container h3 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.about-us-container p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+  footer {
+    border-top: 5px solid white;
+    padding: 20px;
+    
+}
