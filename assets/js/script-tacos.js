@@ -20,8 +20,8 @@ $(document).ready(function () {
 let btnDiv = $("#btn-test");
 
 let randomBtnTaco = $("<button>");
-randomBtnTaco.text("Forget it, I just want tacos");
-randomBtnTaco.attr('class', "random-taco");
+randomBtnTaco.text("Give me a random taco recipe!");
+randomBtnTaco.attr('class', "random-btn");
 randomBtnTaco.attr("id", "random-btn-taco");
 btnDiv.append(randomBtnTaco);
 

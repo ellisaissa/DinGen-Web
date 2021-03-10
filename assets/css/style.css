@@ -11,6 +11,20 @@ body {
     background-size: cover;
 }
 
+/* CSS styling for the eat in page (search features) */
+
+#user-search-input {
+    padding: 0.75%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 75%;
+}
+
+#btn-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .meal-option-names {
     font-size: 24px;
     font-weight: bold;
@@ -28,17 +42,22 @@ body {
 }
 
 #recipe-modal {
-    padding: 7%;
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 7%;
     overflow: scroll;
 }
 
-.random-taco {
-    background-color: #FD0DCB;
-    padding: 1%;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 10%;
-    margin-top: 10%;
+/* CSS styling for the tacos page */
+
+#taco-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 .taco-ingredient {
@@ -62,10 +81,11 @@ body {
 
 .random-btn {
     margin: 20px;
-   padding: 5px;
-   border-radius: 25px;
-   background-color: #C00BE3; 
-   color: white;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: black; 
+    color: white;
+    font-weight: bold;
 
 }
 
@@ -88,15 +108,8 @@ body {
     border: 3px solid black;
     border-radius: 20px;
     padding: 3%;
-    padding-top: 8%;
+    padding-top: 5%;
     overflow: auto;
-  }
-
-  @media screen and (max-width: 768px) {
-    .modal {
-        left: 10%;
-        width: 80%;
-    }
   }
   
   .close {
@@ -139,8 +152,36 @@ body {
     margin-top: 10px;
 }
 
-  footer {
+footer {
     border-top: 5px solid white;
     padding: 20px;
     
 }
+
+i {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Responsive design styling */
+
+@media screen and (max-width: 768px) {
+    .modal {
+        left: 10%;
+        width: 80%;
+    }
+
+    #recipe-modal {
+        padding-bottom: 3.5%;
+    }
+
+    #search-input-eatin {
+        flex-direction: column;
+    }
+
+    #user-search-input {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+  }
