@@ -1,4 +1,13 @@
-
+$(document).ready(function () {
+    $(".nav-toggler").each(function (_, navToggler) {
+      var target = $(navToggler).data("target");
+      $(navToggler).on("click", function () {
+        $(target).animate({
+          height: "toggle",
+        });
+      });
+    });
+  });
 
 //   API meal db
   function searchApi(query, format) {
