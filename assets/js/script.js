@@ -9,7 +9,6 @@ $(document).ready(function () {
     });
   });
 
-<<<<<<< HEAD
   // Modal set up
 // id="search-input-taco"
 // id="random-taco-btn"
@@ -97,8 +96,6 @@ span.onclick = function() {
       })
   })
 
-=======
->>>>>>> main
 //   API meal db
   function searchApi(query, format) {
     let locQueryUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
