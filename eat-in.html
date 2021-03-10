@@ -100,18 +100,25 @@
 </nav>
 
 <form class="search-bar" id="search-input-eatin" action="action_page.php">
-    <input type="text" placeholder="Search.." name="search">
+    <input type="text" placeholder="Search.." name="search" id = "user-search-input">
     <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
-<!--- Open Modal-->
-<!-- <button id="random-eatin-btn taco-btn" class="random-btn" >Random</button> -->
+<!-- Modal -->
 
+<div id = "btn-container"></div>
+
+<modal class = "modal bg-purple-500" id="recipe-modal">
+    
   <!--modal data-->
-  <div class="modal-data">
-    <span class="close"></span>
-  </div>
-</div>
+    <div class="modal-data">
+
+          <div id = "recipe-results"></div>
+
+          <button class = "close">CLOSE</button>
+    </div>
+
+</modal>
 
 <!-- Footer -->
 <footer class="text-white inline-flex items-center text-center w-full object-center mt-12 text-3xl">
@@ -132,4 +139,3 @@
         <script src="./assets/js/scripti-eatin.js"></script>
     </body>
 </html>
-
