@@ -1,3 +1,4 @@
+// navbar
 $(document).ready(function () {
     $(".nav-toggler").each(function (_, navToggler) {
       var target = $(navToggler).data("target");
@@ -9,10 +10,9 @@ $(document).ready(function () {
     });
   });
 
-<<<<<<< HEAD
-  // Modal set up
-// id="search-input-taco"
-// id="random-taco-btn"
+// Modal set up
+// id="search-input-eatout"
+// id="random-eatout-btn"
 
 // id="search-input-eatin"
 // id="random-eatin-btn"
@@ -27,19 +27,16 @@ btnDiv.append(randomBtnTaco);
 
 let modal = document.getElementById("random-taco-modal");
 let btn = document.getElementById("random-btn-taco");
-let taco= document.getElementById ("taco-btn");
 let span = document.getElementsByClassName("close") [0];
 
-btn.onclick= function() {
+btn.onclick = function () {
   modal.style.display = "block";
 }
-
 span.onclick = function() {
   modal.style.display = "none";
 }
 
   // Script for the button that generates a random restaurant response
-
 
   let tacoBaseLayer = $("#base-layer");
   let tacoBaseLayerLink = $("#base-layer-link");
@@ -56,11 +53,9 @@ span.onclick = function() {
   let tacoShell = $("#shell");
   let tacoShellLink = $("#shell-link");
 
-
   randomBtnTaco.on("click", function () {
     console.log("Click event works");
     let requestRandomTaco = "http://taco-randomizer.herokuapp.com/random/";
-
 
     fetch(requestRandomTaco)
       .then(function(response) {
@@ -96,56 +91,3 @@ span.onclick = function() {
         tacoShellLink.attr("target", "_blank");
       })
   })
-
-=======
->>>>>>> main
-//   API meal db
-  function searchApi(query, format) {
-    let locQueryUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
-  
-    if (format) {
-      locQueryUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
-    }
-  
-    fetch(locQueryUrl)
-      .then(function (response) {
-        if (!response.ok) {
-          throw response.json();
-        }
-  
-        return response.json();
-      })
-      .then(function (locRes) {
-        // write query to page so user knows what they are viewing
-        resultTextEl.textContent = locRes.search.query;
-  
-        console.log(locRes);
-  
-        if (!locRes.results.length) {
-          console.log('No results found!');
-          resultContentEl.innerHTML = '<h3>No results found, search again!</h3>';
-        } else {
-          resultContentEl.textContent = '';
-          for (var i = 0; i < locRes.results.length; i++) {
-            printResults(locRes.results[i]);
-          }
-        }
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }
-
-  function handleSearchFormSubmit(event) {
-    event.preventDefault();
-  
-    var searchInputVal = document.querySelector('#search-input').value;
-    var formatInputVal = document.querySelector('#format-input').value;
-  
-    if (!searchInputVal) {
-      console.error('You need a search input value!');
-      return;
-    }
-  
-    searchApi(searchInputVal, formatInputVal);
-  }
