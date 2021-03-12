@@ -49,6 +49,9 @@ body {
     overflow: scroll;
 }
 
+#recipe-close {
+    float: right;
+}
 /* CSS styling for the tacos page */
 
 #taco-title {
