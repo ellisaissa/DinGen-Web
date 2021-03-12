@@ -20,18 +20,22 @@ btnContainer.append(searchBtn);
 let modal = document.getElementById("recipe-modal");
 let btn = document.getElementById("search-btn-eatin");
 let span = document.getElementsByClassName("close") [0];
+let recipeContainer = $('#recipe-results');
 
 btn.onclick = function () {
+  recipeContainer.html("");
   modal.style.display = "block";
 }
 span.onclick = function() {
   modal.style.display = "none";
+  recipeContainer.html("");
+
 }
 
 let recipeName = $('.recipe-name');
 let recipeLink = $('.recipe-link');
 let userSearch = $('#user-search-input');
-let recipeContainer = $('#recipe-results');
+
 
 searchBtn.on('click', runSearchResults);
 
