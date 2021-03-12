@@ -224,9 +224,104 @@ i {
     border-color: darkgray;
 }
 
+.logo-img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 footer {
     border-top: 5px solid white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
     padding: 20px;
+    background-color: rgb(66, 24, 94);
+    width: 100%;
+}
+
+#footer-relative {
+    position: relative;
+    /* margin-top: 90%; */
+    bottom:0;
+}
+
+#footer-bottom {
+    position: fixed;
+    margin-top: 90%;
+    bottom:0;
+}
+/* Social media icon links*/
+.wrapper {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.wrapper .icon-button{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #C00BE3;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:hover{
+    width: 200px;
+  }
+  .wrapper .icon-button .icon{
+    display: flex;
+    color: white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:nth-child(1):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(2):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(3):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(4):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(5):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(6):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .icon-button .icon-span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+
+  .icon-span {
+    color: white;
+  }
+
+.icon-anchor {
+    color: white;
+    text-decoration: none;
 }
 
 /* Responsive design styling */
@@ -249,5 +344,36 @@ footer {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+      justify-content: center;
+    }
+
+    .icon-span {
+        display: none;
+    }
+
+    .wrapper .icon-button:hover{
+        display: none;
+      }
+
+    .icon {
+        align-items: center;
+        /* background: #333; */
+    }
+    .wrapper .icon-button{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        margin: 0 5px;
+      
+      }
+      #footer-relative {
+        position: fixed;
+        /* margin-top: 90%; */
+        bottom:0;
     }
   }
