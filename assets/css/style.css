@@ -213,11 +213,22 @@ footer {
     
 }
 
+img src {
+    
+    border-radius: 50%;
+}
 i {
     margin-left: 20px;
     margin-right: 20px;
 }
 
+.pics{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-color: darkgray;
+
+}
 /* Responsive design styling */
 
 @media screen and (max-width: 768px) {
