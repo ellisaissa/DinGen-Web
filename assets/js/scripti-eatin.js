@@ -11,31 +11,36 @@ $(document).ready(function () {
 
 let btnContainer = $("#btn-container");
 
+// Search Button is dynamically generated
+
 let searchBtn = $("<button>");
 searchBtn.text("Search for Recipes");
 searchBtn.attr('class', "random-btn");
 searchBtn.attr("id", "search-btn-eatin");
 btnContainer.append(searchBtn);
 
+// Opening and closing the modal
+
 let modal = document.getElementById("recipe-modal");
 let btn = document.getElementById("search-btn-eatin");
-let span = document.getElementsByClassName("close") [0];
+let closeBtn = document.getElementsByClassName("close") [0];
 let recipeContainer = $('#recipe-results');
 
 btn.onclick = function () {
   recipeContainer.html("");
   modal.style.display = "block";
 }
-span.onclick = function() {
+closeBtn.onclick = function() {
   modal.style.display = "none";
   recipeContainer.html("");
 
 }
 
+// Fetching the data from the API
+
 let recipeName = $('.recipe-name');
 let recipeLink = $('.recipe-link');
 let userSearch = $('#user-search-input');
-
 
 searchBtn.on('click', runSearchResults);
 
