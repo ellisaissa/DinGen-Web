@@ -53,7 +53,7 @@
             </g>
         </svg>
             <span class="text-xl text-white font-bold uppercase tracking-wide"
-                > Food style</span>
+                >DINGEN</span>
     </a>
 
     <button
@@ -99,14 +99,7 @@
     </div>
 </nav>
 
-<form class="search-bar " id="search-input-eatout" action="action_page.php">
-  <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-
-<!-- <button class="random-btn" id="random-eatout-btn">Random</button> -->
-
-<div id = "btn-test"></div>
+<div class = "flex justify-center" id = "btn-wrapper"></div>
 
 <!--- Open Modal-->
 <modal class = "modal bg-purple-500" id="random-taco-modal">
@@ -115,6 +108,7 @@
     <div class="modal-data">
 
           <div id = "taco-results">
+            <h3 id = "taco-title">YOUR RANDOM TACO</h3>
             <p>Base Layer: <a id = "base-layer-link"><span id = "base-layer"></a></span></p>
 
             <p>Condiment: <a id = "condiment-link"><span id = "condiment"></a></span></p>
@@ -126,18 +120,30 @@
             <p>Shell: <a id = "shell-link"><span id = "shell"></a></span></p>
           </div>
 
-          <button class = "close">CLOSE</button>
+          <h3 id = "save-search-title">SAVE SEARCH?</h3>
+
+          <div id = "button-choices">
+            <button class = "close" id = "yes-btn">YES</button>
+            <button class = "close" id = "no-btn">NO</button>
+          </div>
+  
     </div>
 
 </modal>
 
+<div class = "flex justify-center" id = "hall-of-fame-container">
+  <h3 id = "hof-title">TACO HALL OF FAME</h3>
+  <p id = "hof-descr">Drag and drop your favorite taco combinations so that your favorites appear at the top!</p>
+
+  <ul id = "taco-list"></ul>
+</div>
 
 <!-- Footer -->
-<footer class="text-white inline-flex items-center text-center w-full object-center mt-12 text-3xl">
-    <i class="fab fa-facebook flex-auto"></i>
-    <i class="fab fa-instagram  flex-auto"></i>
+<footer class="text-white inline-flex justify-center items-center text-center w-full object-center mt-12 text-3xl">
+    <i class="fab fa-facebook"></i>
+    <a href= "https://www.instagram.com/DinGenWeb/"><i class="fab fa-instagram  flex-auto"></i>
     <i class="fab fa-twitter  flex-auto"></i>
-    <i class="fab fa-youtube flex-auto"></i>
+    <a href= "https://youtu.be/HUEu4r3cW8U"><i class="fab fa-youtube flex-auto"></i>
     <i class="fab fa-linkedin-in flex-auto"></i>
 </footer>
 
@@ -147,6 +153,8 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"
         ></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         <script src="./assets/js/script-tacos.js"></script>
     </body>

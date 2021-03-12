@@ -53,7 +53,7 @@
             </g>
         </svg>
             <span class="text-xl text-white font-bold uppercase tracking-wide"
-                > Food style</span>
+                >DINGEN</span>
     </a>
 
     <button
@@ -99,28 +99,31 @@
     </div>
 </nav>
 
-<form class="search-bar" id="search-input-eatin" action="action_page.php">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
+<form class="search-bar flex items-center" id="search-input-eatin" action="action_page.php">
+    <input type="text" placeholder="Search recipes by name or ingredient . . ." name="search" id = "user-search-input">
+    <div id = "btn-container"></div>
 </form>
 
-<button class="random-btn" id="random-eatin-btn">Random</button>
+<!-- Modal -->
 
-<!--- Open Modal-->
-<button id="modal btn"> open modal</button>
-<div id="results-modal" class="modal">
+<modal class = "modal bg-purple-500" id="recipe-modal">
+    
   <!--modal data-->
-  <div class="modal-data">
-    <span class="close"></span>
-  </div>
-</div>
+    <div class="modal-data">
+
+          <div id = "recipe-results"></div>
+
+          <button class = "close">CLOSE</button>
+    </div>
+
+</modal>
 
 <!-- Footer -->
-<footer class="text-white inline-flex items-center text-center w-full object-center mt-12 text-3xl">
-    <i class="fab fa-facebook flex-auto"></i>
-    <i class="fab fa-instagram  flex-auto"></i>
-    <i class="fab fa-twitter  flex-auto"></i>
-    <i class="fab fa-youtube flex-auto"></i>
+<footer class="text-white inline-flex justify-center text-center w-full object-center mt-12 text-3xl">
+    <i class="fab fa-facebook"></i>
+    <a href= "https://www.instagram.com/DinGenWeb/"><i class="fab fa-instagram flex-auto"></i>
+    <i class="fab fa-twitter flex-auto"></i>
+    <a href= "https://youtu.be/HUEu4r3cW8U"><i class="fab fa-youtube flex-auto"></i>
     <i class="fab fa-linkedin-in flex-auto"></i>
 </footer>
 
@@ -134,4 +137,3 @@
         <script src="./assets/js/scripti-eatin.js"></script>
     </body>
 </html>
-

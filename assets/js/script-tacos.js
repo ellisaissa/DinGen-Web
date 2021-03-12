@@ -1,4 +1,4 @@
-// navbar
+// Navbar
 $(document).ready(function () {
     $(".nav-toggler").each(function (_, navToggler) {
       var target = $(navToggler).data("target");
@@ -10,33 +10,42 @@ $(document).ready(function () {
     });
   });
 
-// Modal set up
-// id="search-input-eatout"
-// id="random-eatout-btn"
+// Dynamically generating the random button
 
-// id="search-input-eatin"
-// id="random-eatin-btn"
-
-let btnDiv = $("#btn-test");
+let btnDiv = $("#btn-wrapper");
 
 let randomBtnTaco = $("<button>");
-randomBtnTaco.text("Forget it, I just want tacos");
-randomBtnTaco.attr('class', "random-taco");
+randomBtnTaco.text("Give me a random taco recipe!");
+randomBtnTaco.attr('class', "random-btn");
 randomBtnTaco.attr("id", "random-btn-taco");
 btnDiv.append(randomBtnTaco);
 
 let modal = document.getElementById("random-taco-modal");
 let btn = document.getElementById("random-btn-taco");
-let span = document.getElementsByClassName("close") [0];
+let yesBtn = document.getElementById("yes-btn");
+let noBtn = document.getElementById("no-btn");
+
+// Event listeners to display and close the modal
 
 btn.onclick = function () {
   modal.style.display = "block";
 }
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
-  // Script for the button that generates a random restaurant response
+//Clear local storage if desired
+let hofList = $("#taco-list");
+let clearStorageBtn = $("<button>");
+clearStorageBtn.text("Clear Taco Hall Of Fame");
+clearStorageBtn.attr('class', "random-btn");
+btnDiv.append(clearStorageBtn);
+
+clearStorageBtn.on("click", function () {
+  console.log("Listening");
+  localStorage.setItem("savedTacos", null);
+  hofList.children().remove();
+
+})
+
+// Script for the button that generates a random taco
 
   let tacoBaseLayer = $("#base-layer");
   let tacoBaseLayerLink = $("#base-layer-link");
@@ -63,7 +72,6 @@ span.onclick = function() {
       })
 
       .then(function(response) {
-        console.log(response);
 
         tacoBaseLayer.text(response.base_layer.name);
         tacoBaseLayer.attr("style", "color: blue; font-weight: bold; text-decoration: underline;");
@@ -90,4 +98,99 @@ span.onclick = function() {
         tacoShellLink.attr("href", response.shell.url);
         tacoShellLink.attr("target", "_blank");
       })
+
+      .then (function(response) {
+        return response;
+      })
+
   })
+
+  // User can decide whether or not to save a search to local storage
+
+  yesBtn.onclick = function () {
+    console.log("User clicked yes");
+    saveTaco();
+    modal.style.display = "none";
+  }
+  noBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  let savedTacosArray = JSON.parse(localStorage.getItem("savedTacos"));
+
+// Function that stores selected random taco responses in local storage
+
+  function saveTaco() {
+
+    let requestRandomTaco = "http://taco-randomizer.herokuapp.com/random/";
+
+    fetch(requestRandomTaco)
+      .then(function(response) {
+        return response.json();
+      })
+
+      .then(function(response) {
+
+        let newSave = $('<li>');
+        newSave.text(response.base_layer.name + ", " + response.condiment.name + ", " + response.mixin.name + ", " + response.seasoning.name + ", " + response.shell.name);
+        newSave.addClass("hof-list-items");
+        hofList.append(newSave);
+
+        let tacoInfo = {
+          baseName: response.base_layer.name,
+          condimentName: response.condiment.name,
+          mixinName: response.mixin.name,
+          seasoningName: response.seasoning.name,
+          shellName: response.shell.name
+        }
+
+        if (savedTacosArray == null) {
+          savedTacosArray = [tacoInfo];
+          console.log(savedTacosArray);
+          localStorage.setItem("savedTacos", JSON.stringify(savedTacosArray));
+      
+        } else {
+          savedTacosArray.push(tacoInfo);
+          console.log(savedTacosArray);
+          localStorage.setItem("savedTacos", JSON.stringify(savedTacosArray));
+        }
+
+      })
+
+    $(function() {
+      $("#taco-list").sortable({
+        placeholder: "ui-state-highlight"
+      });
+      $("taco-list").disableSelection();
+    } );
+
+  }
+
+  // Displays saved searches on page load
+
+  displayHallOfFame();
+
+  function displayHallOfFame() {
+    let retrievedTacoSearches = JSON.parse(localStorage.getItem("savedTacos"));
+    console.log(retrievedTacoSearches);
+
+    if (savedTacosArray != null) {
+      for (let i = 0; i < retrievedTacoSearches.length; i++) {
+        let listItem = retrievedTacoSearches[i];
+        let createdLi = $('<li>');
+        createdLi.text(listItem.baseName + ", " + listItem.condimentName + ", " + listItem.mixinName + ", " + listItem.seasoningName + ", " + listItem.shellName);
+        createdLi.addClass("hof-list-items");
+        hofList.append(createdLi);
+
+      }
+
+      $(function() {
+        $("#taco-list").sortable({
+          placeholder: "ui-state-highlight"
+        });
+        $("taco-list").disableSelection();
+      } );
+
+    }
+
+  }

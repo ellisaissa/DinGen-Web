@@ -11,13 +11,89 @@ body {
     background-size: cover;
 }
 
-.random-taco {
-    background-color: #FD0DCB;
-    padding: 1%;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 10%;
-    margin-top: 10%;
+/* CSS styling for the eat in page (search features) */
+
+#user-search-input {
+    padding: 0.75%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 75%;
+}
+
+#btn-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.meal-option-names {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 3%;
+    margin-top: 3%;
+
+}
+
+.meal-links {
+    color: blue; 
+    font-weight: bold; 
+    font-size: 16px; 
+    text-decoration: underline; 
+    line-height: 2.5;
+}
+
+#recipe-modal {
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 7%;
+    overflow: scroll;
+}
+
+/* CSS styling for the tacos page */
+
+#taco-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#hall-of-fame-container {
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hof-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+#hof-descr {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.hof-list-items {
+    background-color: black; 
+    color: white; 
+    font-weight: bold; 
+    padding: 2%; 
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 3%; 
+    text-align: center; 
+    cursor: grab;
 }
 
 .taco-ingredient {
@@ -41,10 +117,11 @@ body {
 
 .random-btn {
     margin: 20px;
-   padding: 5px;
-   border-radius: 25px;
-   background-color: #C00BE3; 
-   color: white;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: black; 
+    color: white;
+    font-weight: bold;
 
 }
 
@@ -56,6 +133,15 @@ body {
     color: #FD0DCB;
 }
 
+#save-search-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
 .modal {
     display:none;
     position:fixed;
@@ -63,23 +149,31 @@ body {
     left: 25%;
     top: 25%;
     width: 50%;
-    height: 50%;
+    height: 60%;
     border: 3px solid black;
     border-radius: 20px;
     padding: 3%;
-    padding-top: 8%;
     overflow: auto;
+  }
+
+  #button-choices {
+      display: flex;
+      justify-content: center;
   }
   
   .close {
     color: white;
     background-color: black;
     padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     border: 2px solid black;
     border-radius: 10px;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-bottom: 5%;
   }
   
   .close:hover,
@@ -110,7 +204,7 @@ body {
     margin-top: 10px;
 }
 
-  footer {
+footer {
     border-top: 5px solid white;
     padding: 20px;
     
@@ -120,3 +214,37 @@ img src {
     
     border-radius: 50%;
 }
+i {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pics{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-color: darkgray;
+
+}
+/* Responsive design styling */
+
+@media screen and (max-width: 768px) {
+    .modal {
+        left: 10%;
+        width: 80%;
+    }
+
+    #recipe-modal {
+        padding-bottom: 3.5%;
+    }
+
+    #search-input-eatin {
+        flex-direction: column;
+    }
+
+    #user-search-input {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+  }
