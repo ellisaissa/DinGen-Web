@@ -145,7 +145,7 @@ body {
     top: 25%;
     width: 50%;
     height: 60%;
-    border: 3px solid black;
+    border: 8px solid rgb(66, 24, 94);
     border-radius: 20px;
     padding: 3%;
     overflow: auto;
