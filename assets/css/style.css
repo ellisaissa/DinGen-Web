@@ -223,6 +223,7 @@ i {
     height: 150px;
     border: 5px solid grey;
     margin-top: 75px;
+    margin-bottom: 20px;
 }
 
 .flex-container{
