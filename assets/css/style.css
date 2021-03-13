@@ -10,6 +10,14 @@ body {
     background-size: cover;
 }
 
+.title-logo {
+    color: white;
+    font-size: 60px;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
 /* CSS styling for the Eat In page (search features) */
 
 #user-search-input {
@@ -153,7 +161,7 @@ body {
     top: 25%;
     width: 50%;
     height: 60%;
-    border: 3px solid black;
+    border: 8px solid rgb(66, 24, 94);
     border-radius: 20px;
     padding: 3%;
     overflow: auto;
@@ -239,7 +247,6 @@ footer {
 
 #footer-relative {
     position: relative;
-    /* margin-top: 90%; */
     bottom:0;
 }
 
@@ -324,6 +331,38 @@ footer {
     text-decoration: none;
 }
 
+/* Email input */
+
+.email-form {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+    margin: 10px;
+    
+}
+
+.email-input {
+    flex-direction: row;
+    color: #8D00FA;
+    border-radius: 15px;
+    border: 5px solid #C00BE3;
+    width: 300px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.email-btn {
+    flex-direction: row;
+    background-color: #C00BE3;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    height: 35px;
+    width: 86px;
+    margin-top: 5px;
+}
+
 /* Responsive design styling */
 
 @media screen and (max-width: 768px) {
@@ -346,10 +385,12 @@ footer {
         margin-right: 5%;
     }
 
+    .title-logo {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
     .wrapper {
-        display: flex;
-        align-items: center;
-      justify-content: center;
+        width: 100%;
     }
 
     .icon-span {
@@ -362,18 +403,31 @@ footer {
 
     .icon {
         align-items: center;
-        /* background: #333; */
+        justify-content: center;
     }
     .wrapper .icon-button{
         display: flex;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         margin: 0 5px;
       
       }
       #footer-relative {
         position: fixed;
-        /* margin-top: 90%; */
         bottom:0;
     }
-  }
+    .wrapper .icon-button .icon{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        line-height: 30px;
+        
+    }
+    .email-input {
+        border-radius: 15px;
+        border: 5px solid #C00BE3;
+        width: 247px;
+        height: 35px;
+        margin-top: 5px;
+    }
+}
