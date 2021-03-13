@@ -64,6 +64,7 @@ function runSearchResults (event) {
       })
 
       .then(function (response) {
+
         console.log(response);
 
         let modalTitle = $('<h1>');
@@ -71,25 +72,28 @@ function runSearchResults (event) {
         modalTitle.attr("style", "font-weight: bold; color: white; font-size: 36px; text-decoration: underline; margin-bottom: 10%; text-align: center;");
         recipeContainer.append(modalTitle);
 
-        for (let i = 0; i < response.meals.length; i++) {
-
-          console.log(response.meals[i].strMeal);
-
-          let mealOption = $('<h3>');
-          mealOption.text(response.meals[i].strMeal);
-          mealOption.addClass("meal-option-names");
-          recipeContainer.append(mealOption);
-
-          console.log(response.meals[i].strSource);
-
-          let mealUrl = $('<a>');
-          mealUrl.attr("href", response.meals[i].strSource);
-          mealUrl.addClass("meal-links");
-          mealUrl.text("CLICK HERE FOR FULL RECIPE");
-          mealUrl.attr("target", "_blank");
-          recipeContainer.append(mealUrl);
+        if (response.meals == null) {
+          let errorMsg = $('<p>');
+          errorMsg.text("No recipes found. Please try again.");
+          errorMsg.addClass("error-message");
+          recipeContainer.append(errorMsg);
+          return;
+        } else {
+          for (let i = 0; i < response.meals.length; i++) {
+  
+            let mealOption = $('<h3>');
+            mealOption.text(response.meals[i].strMeal);
+            mealOption.addClass("meal-option-names");
+            recipeContainer.append(mealOption);
+  
+            let mealUrl = $('<a>');
+            mealUrl.attr("href", response.meals[i].strSource);
+            mealUrl.addClass("meal-links");
+            mealUrl.text("CLICK HERE FOR FULL RECIPE");
+            mealUrl.attr("target", "_blank");
+            recipeContainer.append(mealUrl);
+          }
         }
-
       })
 
     }
