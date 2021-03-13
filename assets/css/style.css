@@ -4,14 +4,21 @@ body {
     border: none;
     width: 100%;
     height: 100%;
-    /* background-image: inherit; */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-/* CSS styling for the eat in page (search features) */
+.title-logo {
+    color: white;
+    font-size: 60px;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* CSS styling for the Eat In page (search features) */
 
 #user-search-input {
     padding: 0.75%;
@@ -49,14 +56,29 @@ body {
     overflow: scroll;
 }
 
-/* CSS styling for the tacos page */
+#recipe-close {
+    float: right;
+}
 
-#taco-title {
+.error-message {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 5%;
+}
+
+/* CSS styling for the Tacos Tonight page */
+
+.titles {
     font-size: 36px;
     font-weight: bold;
     color: white;
     text-decoration: underline;
     text-align: center;
+}
+
+#taco-title {
     margin-bottom: 5%;
 }
 
@@ -66,11 +88,6 @@ body {
 }
 
 #hof-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    text-decoration: underline;
-    text-align: center;
     margin-top: 8%;
     margin-bottom: 3%;
 }
@@ -122,7 +139,6 @@ body {
     background-color: black; 
     color: white;
     font-weight: bold;
-
 }
 
 .random-btn:hover {
@@ -134,11 +150,6 @@ body {
 }
 
 #save-search-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    text-decoration: underline;
-    text-align: center;
     margin-bottom: 5%;
 }
 
@@ -150,7 +161,7 @@ body {
     top: 25%;
     width: 50%;
     height: 60%;
-    border: 3px solid black;
+    border: 8px solid rgb(66, 24, 94);
     border-radius: 20px;
     padding: 3%;
     overflow: auto;
@@ -184,10 +195,11 @@ body {
     cursor: pointer;
   }
 
+  /* About Us page styling */
+
   .about-us-container {
       color: white;
       text-align: center;
-
   }
 
   .about-us-container h1 {
@@ -197,7 +209,7 @@ body {
   .about-us-container h3 {
     font-size: 25px;
     margin-top: 5px;
-}
+  }
 
 .about-us-container p {
     font-size: 20px;
@@ -210,6 +222,10 @@ footer {
     
 }
 
+
+img {
+    border-radius: 50%;
+}
 
 i {
     margin-left: 20px;
@@ -236,6 +252,140 @@ i {
     
 }
 
+    border-color: darkgray;
+}
+
+.logo-img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer {
+    border-top: 5px solid white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: rgb(66, 24, 94);
+    width: 100%;
+}
+
+#footer-relative {
+    position: relative;
+    bottom:0;
+}
+
+#footer-bottom {
+    position: fixed;
+    margin-top: 90%;
+    bottom:0;
+}
+/* Social media icon links*/
+.wrapper {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.wrapper .icon-button{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #C00BE3;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:hover{
+    width: 200px;
+  }
+  .wrapper .icon-button .icon{
+    display: flex;
+    color: white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:nth-child(1):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(2):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(3):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(4):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(5):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button:nth-child(6):hover .icon{
+    background: #FD0DCB;
+  }
+  .wrapper .icon-button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .icon-button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .icon-button .icon-span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+
+  .icon-span {
+    color: white;
+  }
+
+.icon-anchor {
+    color: white;
+    text-decoration: none;
+}
+
+/* Email input */
+
+.email-form {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+    margin: 10px;
+    
+}
+
+.email-input {
+    flex-direction: row;
+    color: #8D00FA;
+    border-radius: 15px;
+    border: 5px solid #C00BE3;
+    width: 300px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.email-btn {
+    flex-direction: row;
+    background-color: #C00BE3;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    height: 35px;
+    width: 86px;
+    margin-top: 5px;
+}
+
 /* Responsive design styling */
 
 @media screen and (max-width: 768px) {
@@ -257,4 +407,50 @@ i {
         margin-left: 5%;
         margin-right: 5%;
     }
-  }
+
+    .title-logo {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .wrapper {
+        width: 100%;
+    }
+
+    .icon-span {
+        display: none;
+    }
+
+    .wrapper .icon-button:hover{
+        display: none;
+      }
+
+    .icon {
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper .icon-button{
+        display: flex;
+        height: 50px;
+        width: 50px;
+        margin: 0 5px;
+      
+      }
+      #footer-relative {
+        position: fixed;
+        bottom:0;
+    }
+    .wrapper .icon-button .icon{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        line-height: 30px;
+        
+    }
+    .email-input {
+        border-radius: 15px;
+        border: 5px solid #C00BE3;
+        width: 247px;
+        height: 35px;
+        margin-top: 5px;
+    }
+}

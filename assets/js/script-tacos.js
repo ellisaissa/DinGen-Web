@@ -16,7 +16,7 @@ let btnDiv = $("#btn-wrapper");
 
 let randomBtnTaco = $("<button>");
 randomBtnTaco.text("Give me a random taco recipe!");
-randomBtnTaco.attr('class', "random-btn");
+randomBtnTaco.attr("class", "random-btn");
 randomBtnTaco.attr("id", "random-btn-taco");
 btnDiv.append(randomBtnTaco);
 
@@ -35,11 +35,10 @@ btn.onclick = function () {
 let hofList = $("#taco-list");
 let clearStorageBtn = $("<button>");
 clearStorageBtn.text("Clear Taco Hall Of Fame");
-clearStorageBtn.attr('class', "random-btn");
+clearStorageBtn.attr("class", "random-btn");
 btnDiv.append(clearStorageBtn);
 
 clearStorageBtn.on("click", function () {
-  console.log("Listening");
   localStorage.setItem("savedTacos", null);
   hofList.children().remove();
 
@@ -63,8 +62,8 @@ clearStorageBtn.on("click", function () {
   let tacoShellLink = $("#shell-link");
 
   randomBtnTaco.on("click", function () {
-    console.log("Click event works");
-    let requestRandomTaco = "http://taco-randomizer.herokuapp.com/random/";
+
+    let requestRandomTaco = "https://taco-randomizer.herokuapp.com/random/";
 
     fetch(requestRandomTaco)
       .then(function(response) {
@@ -166,13 +165,12 @@ clearStorageBtn.on("click", function () {
 
   }
 
-  // Displays saved searches on page load
+  // Display saved searches on page load
 
   displayHallOfFame();
 
   function displayHallOfFame() {
     let retrievedTacoSearches = JSON.parse(localStorage.getItem("savedTacos"));
-    console.log(retrievedTacoSearches);
 
     if (savedTacosArray != null) {
       for (let i = 0; i < retrievedTacoSearches.length; i++) {
@@ -181,7 +179,6 @@ clearStorageBtn.on("click", function () {
         createdLi.text(listItem.baseName + ", " + listItem.condimentName + ", " + listItem.mixinName + ", " + listItem.seasoningName + ", " + listItem.shellName);
         createdLi.addClass("hof-list-items");
         hofList.append(createdLi);
-
       }
 
       $(function() {

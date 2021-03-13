@@ -11,27 +11,36 @@ $(document).ready(function () {
 
 let btnContainer = $("#btn-container");
 
+// Search Button is dynamically generated
+
 let searchBtn = $("<button>");
 searchBtn.text("Search for Recipes");
 searchBtn.attr('class', "random-btn");
 searchBtn.attr("id", "search-btn-eatin");
 btnContainer.append(searchBtn);
 
+// Opening and closing the modal
+
 let modal = document.getElementById("recipe-modal");
 let btn = document.getElementById("search-btn-eatin");
-let span = document.getElementsByClassName("close") [0];
+let closeBtn = document.getElementsByClassName("close") [0];
+let recipeContainer = $('#recipe-results');
 
 btn.onclick = function () {
+  recipeContainer.html("");
   modal.style.display = "block";
 }
-span.onclick = function() {
+closeBtn.onclick = function() {
   modal.style.display = "none";
+  recipeContainer.html("");
+
 }
+
+// Fetching the data from the API
 
 let recipeName = $('.recipe-name');
 let recipeLink = $('.recipe-link');
 let userSearch = $('#user-search-input');
-let recipeContainer = $('#recipe-results');
 
 searchBtn.on('click', runSearchResults);
 
@@ -55,6 +64,7 @@ function runSearchResults (event) {
       })
 
       .then(function (response) {
+
         console.log(response);
 
         let modalTitle = $('<h1>');
@@ -62,25 +72,28 @@ function runSearchResults (event) {
         modalTitle.attr("style", "font-weight: bold; color: white; font-size: 36px; text-decoration: underline; margin-bottom: 10%; text-align: center;");
         recipeContainer.append(modalTitle);
 
-        for (let i = 0; i < response.meals.length; i++) {
-
-          console.log(response.meals[i].strMeal);
-
-          let mealOption = $('<h3>');
-          mealOption.text(response.meals[i].strMeal);
-          mealOption.addClass("meal-option-names");
-          recipeContainer.append(mealOption);
-
-          console.log(response.meals[i].strSource);
-
-          let mealUrl = $('<a>');
-          mealUrl.attr("href", response.meals[i].strSource);
-          mealUrl.addClass("meal-links");
-          mealUrl.text("CLICK HERE FOR FULL RECIPE");
-          mealUrl.attr("target", "_blank");
-          recipeContainer.append(mealUrl);
+        if (response.meals == null) {
+          let errorMsg = $('<p>');
+          errorMsg.text("No recipes found. Please try again.");
+          errorMsg.addClass("error-message");
+          recipeContainer.append(errorMsg);
+          return;
+        } else {
+          for (let i = 0; i < response.meals.length; i++) {
+  
+            let mealOption = $('<h3>');
+            mealOption.text(response.meals[i].strMeal);
+            mealOption.addClass("meal-option-names");
+            recipeContainer.append(mealOption);
+  
+            let mealUrl = $('<a>');
+            mealUrl.attr("href", response.meals[i].strSource);
+            mealUrl.addClass("meal-links");
+            mealUrl.text("CLICK HERE FOR FULL RECIPE");
+            mealUrl.attr("target", "_blank");
+            recipeContainer.append(mealUrl);
+          }
         }
-
       })
 
     }

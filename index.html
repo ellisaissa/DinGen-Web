@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" 
-      type="image/png" 
-      href="./assets/img/food-logo-black.png">
+    <link rel="icon" type="image/png" href="./assets/img/food-logo-black.png">
 
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -52,78 +50,104 @@
                     C721.97,486.92,739.89,437.52,770.05,397.95z"/>
             </g>
         </svg>
-            <span class="text-xl text-white font-bold uppercase tracking-wide"
-                > DinGen</span>
+            <span class="text-xl text-white font-bold uppercase tracking-wide"> DinGen</span>
     </a>
 
-    <button
-    class="text-white inline-flex p-3 hover:bg-pink-400 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
-    data-target="#navigation"
-    >
+    <button class="text-white inline-flex p-3 hover:bg-pink-400 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" data-target="#navigation">
         <i class="fas fa-bars"></i>
     </button>
-    <div
-        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
-        id="navigation"
-      >
-        <div
-          class=" lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
-        >
-          <a href="index.html"
-            class="active lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white"
-          >
+
+    <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+        <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+
+          <a href="index.html" class="active lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white">
             <span>Home</span>
           </a>
 
-          <a
-            href="eat-in.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white"
-          >
+          <a href="eat-in.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white">
             <span>Eat In</span>
           </a>
 
-          <a
-            href="tacos-tonight.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white"
-          >
+          <a href="tacos-tonight.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white">
             <span>Tacos Tonight</span>
           </a>
     
-          <a
-            href="about-us.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white"
-          >
+          <a href="about-us.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-pink-400 hover:text-white">
             <span>About Us</span>
           </a>
+
         </div>
     </div>
 </nav>
 
-<div>
+<div class="logo-img">
   <img src="./assets/img/food-logo.svg" alt="logo">
 </div>
 
+<h1 class="title-logo">DINGEN</h1>
+
 <p class="text-white p-2 md:m-20 text-base md:text-xl lg:text-2xl lg:m-12 items-center text-center">
-Welcome to DinGen! The all in one platform that will help you with the daunting problem of figuring out what to eat. Finding the perfect restaurant for eating out, or  
-the perfect recipe for eating in. 
+Welcome to DinGen: the dinner generator for when you're not sure what to eat. If you're interested in searching for recipes, head to our
+"Eat In" page to search by ingredient or by recipe name. Or, if you're just ready to have some tacos, head to "Tacos Tonight" to generate 
+a random taco. Whatever you're looking for, DinGen will help you find new, amazing dinner ideas quickly.
 </p>
 
 <!-- Footer -->
-<footer class="text-white inline-flex justify-center items-center text-center w-full object-center mt-12 text-3xl">
-    <i class="fab fa-facebook"></i>
-    <a href= "https://www.instagram.com/DinGenWeb/"><i class="fab fa-instagram  flex-auto"></i>
-    <i class="fab fa-twitter  flex-auto"></i>
-    <a href= "https://youtu.be/HUEu4r3cW8U"><i class="fab fa-youtube flex-auto"></i>
-    <i class="fab fa-linkedin-in flex-auto"></i>
+<!-- inline-flex justify-center text-center w-full object-center mt-12 text-3xl -->
+<footer id="footer-relative" class="text-white ">
+    <div class="wrapper">
+
+        <div class="icon-button">
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i></div>
+            <span class="icon-span">Facebook</span>
+        </div>
+    
+        <div class="icon-button">
+            <div class="icon">
+                <i class="fab fa-twitter"></i></div>
+                    <span class="icon-span">Twitter</span>
+        </div>
+    
+        <div class="icon-button">
+            <div class="icon">
+                <a class="icon-anchor" href= "https://www.instagram.com/DinGenWeb/" target="_blank">
+                <i class="fab fa-instagram"></i></div>
+                    <span class="icon-span">Instagram</span></a>
+        </div>
+    
+        <div class="icon-button">
+            <div class="icon">
+                <a class="icon-anchor" href="https://github.com/ellisaissa/super-duper-octo-fiesta" target="_blank">
+                    <i class="fab fa-github"></i></div>
+                        <span class="icon-span">Github</span></a>
+        </div>
+    
+        <div class="icon-button">
+            <div class="icon">
+                <a class="icon-anchor" href= "https://youtu.be/HUEu4r3cW8U" target="_blank">
+                <i class="fab fa-youtube"></i></div>
+                    <span class="icon-span">YouTube</span></a>
+        </div>
+    
+        <div class="icon-button">
+            <div class="icon">
+                <i class="fab fa-linkedin-in"></i></div>
+                    <span class="icon-span">LinkedIn</span>
+        </div>
+    
+    </div>
+
+    <form class="email-form" action="">
+        <input class="email-input" type="text" placeholder="  Email">
+        <input class="email-btn" type="submit" value="Subscribe">
+
+    </form>
+
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 
-        <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"
-        ></script>
-
-        <script src="./assets/js/script.js"></script>
-    </body>
+</body>
 </html>
