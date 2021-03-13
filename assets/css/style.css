@@ -210,22 +210,31 @@ footer {
     
 }
 
-img src {
-    
-    border-radius: 50%;
-}
+
 i {
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .pics{
+    float: center;
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-color: darkgray;
-
+    border: 5px solid grey;
+    margin-top: 75px;
 }
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-container > div{
+    margin: 10px;
+    padding: 30px;
+    
+}
+
 /* Responsive design styling */
 
 @media screen and (max-width: 768px) {
