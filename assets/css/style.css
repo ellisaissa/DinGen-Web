@@ -390,6 +390,7 @@ footer {
 
     .icon {
         align-items: center;
+        justify-content: center;
     }
     .wrapper .icon-button{
         display: flex;
@@ -408,12 +409,12 @@ footer {
         border-radius: 50%;
         line-height: 30px;
         
-  }
-  .email-input {
-    border-radius: 15px;
-    border: 5px solid #C00BE3;
-    width: 247px;
-    height: 35px;
-    margin-top: 5px;
-}
+    }
+    .email-input {
+        border-radius: 15px;
+        border: 5px solid #C00BE3;
+        width: 247px;
+        height: 35px;
+        margin-top: 5px;
+    }
 }
