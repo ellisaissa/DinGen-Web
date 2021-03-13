@@ -121,7 +121,7 @@ clearStorageBtn.on("click", function () {
 
   function saveTaco() {
 
-    let requestRandomTaco = "http://taco-randomizer.herokuapp.com/random/";
+    let requestRandomTaco = "https://taco-randomizer.herokuapp.com/random/";
 
     fetch(requestRandomTaco)
       .then(function(response) {
