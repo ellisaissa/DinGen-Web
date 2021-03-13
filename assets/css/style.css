@@ -10,6 +10,14 @@ body {
     background-size: cover;
 }
 
+.title-logo {
+    color: white;
+    font-size: 60px;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
 /* CSS styling for the Eat In page (search features) */
 
 #user-search-input {
@@ -351,6 +359,7 @@ footer {
     padding: 8px;
     border-radius: 15px;
     height: 35px;
+    width: 86px;
     margin-top: 5px;
 }
 
@@ -376,6 +385,10 @@ footer {
         margin-right: 5%;
     }
 
+    .title-logo {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
     .wrapper {
         width: 100%;
     }
