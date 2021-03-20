@@ -1,4 +1,8 @@
-# DinGen: A JavaScript-Based Dinner Generator 
+# DinGen: A JavaScript-Based Dinner Generator
+
+## Overview
+
+This application helps users determine what to have for dinner through a recipe search option, as well as an option that generates a random taco recipe. 
 
 ## Description
 
@@ -24,6 +28,18 @@ Overall, we became much more proficient in using Git and GitHub by building this
 
 Please find the deployed application here: https://ellisaissa.github.io/super-duper-octo-fiesta/
 
+## Technologies Used
+
+- HTML
+- CSS
+- TailWind CSS
+- JavaScript
+- jQuery
+- jQuery UI Library
+- Font Awesome
+- MealDB API
+- TacoFancy API
+
 ## Installation
 
 No installation steps are required to view this application. To view the front-end application, visit the URL above. The application's source code can be found on GitHub here: https://github.com/ellisaissa/super-duper-octo-fiesta
@@ -40,16 +56,16 @@ Below are screenshots of the deployed application:
 
 ![screenshot of Tacos Tonight page](assets/img/taco-screenshot.png)
 
-![screenshot of About Us page](screenshot.png)
+![screenshot of About Us page](assets/img/about-us-screenshot.png)
 
 ## Credits
 
-Jon Yeatman was responsible for designing the basic HTML and CSS layout of the application, and wrote JavaScript for the navigation toggle features.
+Jon Yeatman was responsible for designing the basic HTML and CSS layout of the application, and wrote JavaScript for the navigation toggle features. Contact Jon at: https://github.com/Yeatman51
 
-Valerie Russell built the JavaScript for conditionally fetching data from each API and storing client-side data in local storage. She also modified and refactored the CSS as needed.
+Valerie Russell built the JavaScript for conditionally fetching data from each API and storing client-side data in local storage. She also modified and refactored the CSS as needed. Contact Valerie at: https://github.com/vruss14
 
-Ellisa Issa created the repository and was responsible for writing the code for the modals, and creating social media links for DinGen. Ellisa also assisted with editing the written content of the application.
+Ellisa Issa created the repository and was responsible for writing the code for the modals, and creating social media links for DinGen. Ellisa also assisted with editing the written content of the application. Contact Ellisa at: https://github.com/ellisaissa
 
-Kyle Nance designed the About Us page and assisted with the initial search bar functionality for the project.
+Kyle Nance designed the About Us page and assisted with the initial search bar functionality for the project. Contact Kyle at: https://github.com/Silent0ne
 
 
