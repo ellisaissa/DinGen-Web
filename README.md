@@ -26,7 +26,7 @@ Another challenge our team faced was making sure that data from the APIs display
 
 Overall, we became much more proficient in using Git and GitHub by building this application. By creating personal branches and making pull requests, we developed skills that we are eager to implement in future projects.
 
-Please find the deployed application here: https://ellisaissa.github.io/super-duper-octo-fiesta/
+Please find the deployed application here: https://ellisaissa.github.io/DinGen-Web/
 
 ## Technologies Used
 
